@@ -9,7 +9,6 @@ export default async function Home() {
   
   return (
     <main>
-      <h1>Hello next 13 🔥</h1>
       <div className="grid gap-16 grid-cols-fluid">
       {res.results.map((movie) => (
           <Movie 

@@ -12,8 +12,10 @@ export default function RootLayout({ children }) {
 	return (
 	  <html lang="en">
 		<head />
-		<Navbar />
-		<body className={`${montserrat.className} m-32`}>{children}</body>
+		<body className={`${montserrat.className}`}>
+			<Navbar />
+			<div className='mx-32 mb-32 mt-16'>{children}</div>
+		</body>
 	  </html>
 	)
   }

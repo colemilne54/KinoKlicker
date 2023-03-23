@@ -12,9 +12,13 @@
     "@mantine/core": "^6.0.4",
     "@mantine/next": "^6.0.4",
     "@nextui-org/react": "^1.0.0-beta.12",
+    "@radix-ui/react-select": "^1.2.1",
+    "lucide-react": "^0.127.0",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.10.0",
+    "tailwindcss-animate": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "18.15.5",

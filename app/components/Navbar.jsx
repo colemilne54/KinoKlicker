@@ -1,51 +1,25 @@
 import Link from "next/link";
-import Image from "next/image";
-import React, { useState } from "react";
-import Logo from "./Logo";
-import NavItem from "./NavItem";
-
-const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
-];
-
+import React from "react";
 const Navbar = () => {
-  const [navActive, setNavActive] = useState(null);
-  const [activeIdx, setActiveIdx] = useState(-1);
-
   return (
-    <header>
-      <nav className={`nav`}>
-        <Link href={"/"}>
-          <a>
-            <h1 className="logo">CodeWithMarish</h1>
-          </a>
-        </Link>
-        <div
-          onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-          {MENU_LIST.map((menu, idx) => (
-            <div
-              onClick={() => {
-                setActiveIdx(idx);
-                setNavActive(false);
-              }}
-              key={menu.text}
-            >
-              <NavItem active={activeIdx === idx} {...menu} />
-            </div>
-          ))}
-        </div>
-      </nav>
-    </header>
+    <div className="navbar bg-base-100">
+      <div className="flex-1">
+        <a className="btn btn-ghost normal-case text-xl">My Website</a>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
-
 export default Navbar;

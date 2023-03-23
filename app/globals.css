@@ -1,3 +1,4 @@
+/* stylelint-disable unit-allowed-list */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -48,7 +49,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: none;
 }
 
 html,

@@ -13,6 +13,7 @@
     "@mantine/next": "^6.0.4",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@radix-ui/react-select": "^1.2.1",
+    "date-fns": "^2.29.3",
     "lucide-react": "^0.127.0",
     "next": "13.2.4",
     "react": "18.2.0",

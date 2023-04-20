@@ -29,6 +29,9 @@ export default async function MovieDetail({ params }) {
         <h2 className="text-white bg-green-600 inline-block my-2 py-2 px-4 rounded-lg text-sm">
           {res.status}
         </h2>
+        <div className="my-4">
+          <p className="text-lg">{res.overview}</p>
+        </div>
         <Image
           className="my-12 w-full"
           src={imagePath + res.backdrop_path}
@@ -37,9 +40,6 @@ export default async function MovieDetail({ params }) {
           height={1000}
           priority
         />
-      </div>
-      <div className="my-4">
-        <p className="text-lg">{res.overview}</p>
       </div>
     </div>
   )

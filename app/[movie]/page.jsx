@@ -20,6 +20,8 @@ export default async function MovieDetail({ params }) {
   )
   const res = await data.json()
 
+  console.log(res);
+
   return (
     <div>
       <div>
@@ -30,6 +32,13 @@ export default async function MovieDetail({ params }) {
         <h2 className="text-white bg-green-600 inline-block my-2 py-2 px-4 rounded-lg text-sm">
           {res.status}
         </h2>
+        <div>
+          {res.genres.map((genre) => (
+              <h2 key={genre.id} className="text-white bg-blue-600 inline-block my-2 mr-1.5 py-2 px-4 rounded-lg text-sm">
+                {genre.name}
+              </h2>
+          ))}
+        </div>
         <div className="my-4">
           <p className="text-lg">{res.overview}</p>
         </div>

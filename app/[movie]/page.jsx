@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { formatDate } from "../page"
+import {formatDate} from "../js-utils";
 
 export async function generateStaticParams() {
   const data = await fetch(
@@ -20,8 +20,6 @@ export default async function MovieDetail({ params }) {
   )
   const res = await data.json()
 
-  console.log(res);
-
   return (
     <div>
       <div>
@@ -33,7 +31,7 @@ export default async function MovieDetail({ params }) {
           {res.status}
         </h2>
         <div>
-          {res.genres.map((genre) => (
+          {Array.isArray(res.genres) && res.genres.map((genre) => (
               <h2 key={genre.id} className="text-white bg-blue-600 inline-block my-2 mr-1.5 py-2 px-4 rounded-lg text-sm">
                 {genre.name}
               </h2>

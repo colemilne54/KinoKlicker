@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 		<head />
 		<body className={`${montserrat.className}`}>
 			<Navbar />
-			<div className='mx-32 mb-32 mt-16'>{children}</div>
+			<div className='mx-12 mb-12 mt-4 sm:mx-32 sm:mb-32 sm:mt-16'>{children}</div>
 		</body>
 	  </html>
 	)
